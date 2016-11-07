@@ -1,15 +1,15 @@
 /* Colours: */
-$color-grey-05: #F4F4F4;
+$color-grey-05: #F9F9F9;
 $color-grey-15: #DBDBDB;
 $color-grey-30: #ACACAC;
 $color-grey-50: #808080;
 $color-grey-80: #2C2C2C;
 $color-grey-90: #02051C;
 $color-white: #FFFFFF;
-$color-blue: #4A90E2;
+$color-blue-30: #4A90E2;
+$color-blue-90: #2E2A35;
 $color-red: #EA5940;
 $color-yellow-05: #FEDB43;
-$color-yellow-10: #FECD3E;
 
 /* Mixins */
 @mixin all-text {
@@ -24,8 +24,45 @@ $color-yellow-10: #FECD3E;
 	@include all-text;
 	font-family: "effra", sans-serif;
 }
+@mixin script {
+	@include all-text;
+	font-family: "ff-prater-sans-web",sans-serif;
+}
+@mixin monospace {
+	@include all-text;
+	font-family: Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+@mixin button {
+	@extend p;
+	padding: 0px 32px 0px 32px;
+	line-height: 48px; //Border adds 2px extra
+	font-weight: 600;
+	border: 1px solid none;
+	border-radius: 8px;
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.16);
+	&:hover {
+		border: 1px solid none;
+		transition: 0.3s ease;
+		text-decoration: none;
+		box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.20);
+	}
+	&:active {
+		box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.18);
+	}
+}
 
-// Text
+// Layout
+html, body {
+  height: 100%;
+}
+body {
+	padding-top: 90px;
+	@media (max-width: 768px) {
+		padding-top: 60px;
+	}
+}
+
+// Typography
 h1 {
   @include sans-serif;
   color: $color-grey-90;
@@ -76,50 +113,13 @@ p {
   font-size: 20px;
   line-height: 30px;
 	margin-bottom: 30px;
-}
-a {
-	color: $color-grey-90;
-  text-decoration: underline;
-	&:hover{
-		transition: 0.3s ease;
-    color: $color-red;
-    text-decoration: none;
-	}
-  .button {
-    @include sans-serif;
-    color: $color-white;
-    display: inline-block;
-    background: $color-red;
-    border: 4px solid none;
-    border-radius: 25px;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 50px;
-		margin-top: 5px;
-		margin-bottom: 5px;
-    padding: 0px 32px 0px 32px;
-		box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.24);
-		min-width: 250px;
-  	&:hover{
-  		transition: 0.3s ease;
-      text-decoration: none;
-			box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.32);
-  	}
-  }
-}
-
-li {
-	display: inline-block;
-	margin-right: 8px;
-}
-
-li > a {
-	color: $color-grey-90;
-  text-decoration: underline;
-	&:hover{
-		transition: 0.3s ease;
-    color: $color-red;
-    text-decoration: none;
+	a {
+		color: $color-grey-90;
+		text-decoration: underline;
+		&:hover {
+			color: $color-blue-30;
+			text-decoration: none;
+		}
 	}
 }
 ul {
@@ -127,95 +127,222 @@ ul {
   list-style: none;
   padding: 0;
 	margin-top: 30px;
-	//margin: 0;
 }
 
-.link-list {
-	//font-size: 15px;
+// UI
+.button-primary {
+	@include button;
+	color: $color-white;
+	background: $color-red;
+	&:active {
+		color: $color-white;
+		border: 1px solid $color-red;
+		background: darken($color-red, 3%);
+	}
 }
-
-.text-list {
-	list-style: none;
-}
-
-.message {
-	@include sans-serif;
-	color: $color-grey-90;
-	display: inline-block;
+.button-secondary {
+	@include button;
+	border: 1px solid $color-grey-15;
 	background: $color-white;
-	//border: 4px solid none;
-	border-radius: 8px;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 30px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	padding: 20px 32px 20px 32px;
-	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.24);
-	//min-height: 100px;
-	max-width: 640px;
-	.mention {
-		color: $color-blue;
-	}
-	.badge {
-		@include sans-serif;
-		color: $color-grey-30;
-		border-radius: 0px;
-		font-weight: 400;
-		background: $color-grey-05;
-		margin-top: -4px;
-		margin-left: 8px;
-		padding-left: 4px;
-		padding-right: 4px;
+	&:active {
+		border: 1px solid $color-grey-05;
+		background: $color-white;
+		//background: darken($color-white, 1%);
 	}
 }
-
-//Margins
-
-.hero-image {
-	@media screen and (min-width: 768px) {
-		padding-right: 60px;
-		padding-top: 40px;
+.logo {
+	@include script;
+	line-height: 50px;
+	font-size: 40px;
+	font-weight: bold;
+	a {
+		color: $color-grey-90;
+		&:hover{
+			transition: 0.3s ease;
+			text-decoration: none;
+			opacity: 0.7;
+		}
 	}
 }
-
-.size-img {
-  width: 180px;
-  height: 180px;
-  @media screen and (max-width: 992px) {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-.container {
-	//margin: auto 0;
-	@media screen and (max-width: 640px) {
-		margin: 16px;
+body > .logo { // A workaround to keep the logo centred on top of the navbar (using z-index)
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	margin-left: -76px;
+	z-index: 10;
+	@media (max-width: 1024px) {
+		font-size: 32px;
+		margin-left: -62px;
+	}
+	@media (max-width: 768px) {
+		position: absolute;
+		top: 40px;
 	}
 }
 
-.container-title {
+// Containers
+.navbar {
+	z-index: 9;
+	height: 90px;
+	padding-top: 20px;
+	margin: 0px;
+	background: rgba(255,255,255,0.96);
+	box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.10);
+	ul {
+		@extend p;
+	}
+	.navbar-btn {
+		@extend .button-secondary;
+		margin: 0px;
+		.logo-slack {
+			display: inline-block;
+			margin: -4px 0 0 8px;
+			height: 20px;
+			width: 20px;
+		}
+	}
+}
+.navbar-default .navbar-nav > li > a {
+	color: $color-grey-90;
+	text-decoration: none;
+	&:hover{
+		color: $color-grey-50;
+		transition: 0.3s ease;
+		text-decoration: underline;
+	}
+}
+.jumbotron {
+	padding: 60px 0 60px 0;
+	background: $color-white;
+	.thumbnail {
+		height: 128px;
+		width: 128px;
+		padding: 20px;
 		margin-top: 40px;
+		background: $color-yellow-05;
+		border: none;
+		border-radius: 8px;
+	}
+	h2 {
+		margin-bottom: 0px;
+	}
+	p {
+		@extend h2;
+		margin-top: 0px;
+		margin-bottom: 30px;
+		font-weight: 400;
+	}
+	.btn-default {
+		@extend .button-primary;
+		margin: 5px 0px 5px 0px; // Should be resused to preseve vertical rhythm
+	}
+}
+.container-content {
+	padding-top: 30px;
+	padding-bottom: 150px;
+	@media (max-width: 768px) {
+		padding-top: 30px;
+	}
+}
+.panel-default {
+	margin: 0 0 30px 0;
+	background: $color-white;
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.24);
+	border-radius: 8px;
+	border: none; // Required to maintain vertical rhythm
+	.panel-body {
+		padding: 30px 20px 0px 20px;
+	}
+	.media-left {
+		padding-right: 20px;
+	}
+	.media-object {
+		height: 50px;
+		width: 50px;
+		background: $color-yellow-05;
+		border-radius: 8px;
+		border: none;
+	}
+	code {
+		font-size: 16px;
+	}
+	.media-body {
+		.media-heading {
+			margin: 0 0 0 0;
+			font-weight: 600;
+			.badge {
+				margin-top: -4px;
+				margin-left: 8px;
+				padding-left: 4px;
+				padding-right: 4px;
+				border-radius: 0px;
+				font-weight: 400;
+				color: $color-grey-30;
+				background: $color-grey-05;
+			}
+
+		}
+		.message-mention {
+			color: $color-blue-30;
+		}
+		.message-cursive {
+			font-style: italic;
+			color: $color-grey-30;
+		}
+		blockquote {
+			padding: 0px 24px 0 16px;
+			margin-bottom: 30px;
+			border-left: 6px solid $color-grey-15;
+		}
+	}
+}
+.footer {
+	height: 400px;
+	padding: 80px;
+	.logo {
+		color: $color-white;
+		a {
+			color: $color-white;
+		}
+	}
+	ul {
+		padding: 40px 0 40px 0;
+		list-style-type: none;
+		li > a {
+			@extend p;
+			color: $color-white;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.mono {
+		@include monospace;
+		font-size: 16px;
+		font-weight: 400;
+		a {
+			opacity: 0.5;
+			color: $color-white;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 // Themes
-.background-yellow {
-	background: $color-yellow-05;
+.background-white {
+	background: $color-white;
 }
-
-.background-yellower {
-	background: $color-yellow-10;
+.background-grey {
+	background: $color-grey-05;
 }
-
-// Layout
-html, body {
-  height: 100%;
-	background: $color-yellow-05;
-}
-.vertical-center {
-  min-height: 100%;  // Fallback for browsers do NOT support vh unit
-  min-height: 100vh; // These two lines are counted as one :-)
-  display: flex;
-  align-items: center;
+.background-dark {
+	background: $color-blue-90;
+	p {
+		color: $color-white;
+		opacity: 0.5;
+	}
 }

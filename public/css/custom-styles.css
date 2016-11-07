@@ -1,5 +1,14 @@
 /* Colours: */
 /* Mixins */
+html, body {
+  height: 100%; }
+
+body {
+  padding-top: 90px; }
+  @media (max-width: 768px) {
+    body {
+      padding-top: 60px; } }
+
 h1 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -18,7 +27,7 @@ h1 {
       margin-top: 30px;
       margin-bottom: 30px; } }
 
-h2 {
+h2, .jumbotron p, .jumbotron ul, .jumbotron .button-primary, .jumbotron .btn-default, .jumbotron .button-secondary, .jumbotron .navbar .navbar-btn, .navbar .jumbotron .navbar-btn, .jumbotron .footer ul li > a, .footer ul .jumbotron li > a {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-family: "effra", sans-serif;
@@ -29,7 +38,7 @@ h2 {
   margin-top: 30px;
   margin-bottom: 30px; }
   @media screen and (max-width: 640px) {
-    h2 {
+    h2, .jumbotron p, .jumbotron ul, .jumbotron .button-primary, .jumbotron .btn-default, .jumbotron .button-secondary, .jumbotron .navbar .navbar-btn, .navbar .jumbotron .navbar-btn, .jumbotron .footer ul li > a, .footer ul .jumbotron li > a {
       font-size: 26px;
       line-height: 30px;
       margin-top: 30px;
@@ -48,7 +57,7 @@ h3 {
   margin-top: 30px;
   margin-bottom: 0px; }
 
-p, ul {
+p, ul, .button-primary, .jumbotron .btn-default, .button-secondary, .navbar .navbar-btn, .navbar ul, .footer ul li > a {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -59,121 +68,216 @@ p, ul {
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 30px; }
-
-a {
-  color: #02051C;
-  text-decoration: underline; }
-  a:hover {
-    transition: 0.3s ease;
-    color: #EA5940;
-    text-decoration: none; }
-  a .button {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    font-family: "effra", sans-serif;
-    color: #FFFFFF;
-    display: inline-block;
-    background: #EA5940;
-    border: 4px solid none;
-    border-radius: 25px;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 0px 32px 0px 32px;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.24);
-    min-width: 250px; }
-    a .button:hover {
-      transition: 0.3s ease;
-      text-decoration: none;
-      box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.32); }
-
-li {
-  display: inline-block;
-  margin-right: 8px; }
-
-li > a {
-  color: #02051C;
-  text-decoration: underline; }
-  li > a:hover {
-    transition: 0.3s ease;
-    color: #EA5940;
-    text-decoration: none; }
+  p a, ul a, .button-primary a, .jumbotron .btn-default a, .button-secondary a, .navbar .navbar-btn a, .navbar ul a, .footer ul li > a a {
+    color: #02051C;
+    text-decoration: underline; }
+    p a:hover, ul a:hover, .button-primary a:hover, .jumbotron .btn-default a:hover, .button-secondary a:hover, .navbar .navbar-btn a:hover, .footer ul li > a a:hover {
+      color: #4A90E2;
+      text-decoration: none; }
 
 ul {
   list-style: none;
   padding: 0;
   margin-top: 30px; }
 
-.text-list {
-  list-style: none; }
+.button-primary, .jumbotron .btn-default {
+  padding: 0px 32px 0px 32px;
+  line-height: 48px;
+  font-weight: 600;
+  border: 1px solid none;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+  color: #FFFFFF;
+  background: #EA5940; }
+  .button-primary:hover, .jumbotron .btn-default:hover {
+    border: 1px solid none;
+    transition: 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2); }
+  .button-primary:active, .jumbotron .btn-default:active {
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.18); }
+  .button-primary:active, .jumbotron .btn-default:active {
+    color: #FFFFFF;
+    border: 1px solid #EA5940;
+    background: #e84d32; }
 
-.message {
+.button-secondary, .navbar .navbar-btn {
+  padding: 0px 32px 0px 32px;
+  line-height: 48px;
+  font-weight: 600;
+  border: 1px solid none;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+  border: 1px solid #DBDBDB;
+  background: #FFFFFF; }
+  .button-secondary:hover, .navbar .navbar-btn:hover {
+    border: 1px solid none;
+    transition: 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2); }
+  .button-secondary:active, .navbar .navbar-btn:active {
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.18); }
+  .button-secondary:active, .navbar .navbar-btn:active {
+    border: 1px solid #F9F9F9;
+    background: #FFFFFF; }
+
+.logo {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: "effra", sans-serif;
+  font-family: "ff-prater-sans-web",sans-serif;
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: bold; }
+  .logo a {
+    color: #02051C; }
+    .logo a:hover {
+      transition: 0.3s ease;
+      text-decoration: none;
+      opacity: 0.7; }
+
+body > .logo {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 10; }
+  @media (max-width: 1024px) {
+    body > .logo {
+      font-size: 32px;
+      margin-left: -62px; } }
+  @media (max-width: 768px) {
+    body > .logo {
+      position: absolute;
+      top: 40px; } }
+
+.navbar {
+  z-index: 9;
+  height: 90px;
+  padding-top: 20px;
+  margin: 0px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); }
+  .navbar .navbar-btn {
+    margin: 0px; }
+    .navbar .navbar-btn .logo-slack {
+      display: inline-block;
+      margin: -4px 0 0 8px;
+      height: 20px;
+      width: 20px; }
+
+.navbar-default .navbar-nav > li > a {
   color: #02051C;
-  display: inline-block;
+  text-decoration: none; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #808080;
+    transition: 0.3s ease;
+    text-decoration: underline; }
+
+.jumbotron {
+  padding: 60px 0 60px 0;
+  background: #FFFFFF; }
+  .jumbotron .thumbnail {
+    height: 128px;
+    width: 128px;
+    padding: 20px;
+    margin-top: 40px;
+    background: #FEDB43;
+    border: none;
+    border-radius: 8px; }
+  .jumbotron h2, .jumbotron p, .jumbotron ul, .jumbotron .button-primary, .jumbotron .btn-default, .jumbotron .button-secondary, .jumbotron .navbar .navbar-btn, .navbar .jumbotron .navbar-btn, .jumbotron .footer ul li > a, .footer ul .jumbotron li > a {
+    margin-bottom: 0px; }
+  .jumbotron p, .jumbotron ul, .jumbotron .button-primary, .jumbotron .btn-default, .jumbotron .button-secondary, .jumbotron .navbar .navbar-btn, .navbar .jumbotron .navbar-btn, .jumbotron .footer ul li > a, .footer ul .jumbotron li > a {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-weight: 400; }
+  .jumbotron .btn-default {
+    margin: 5px 0px 5px 0px; }
+
+.container-content {
+  padding-top: 30px;
+  padding-bottom: 150px; }
+  @media (max-width: 768px) {
+    .container-content {
+      padding-top: 30px; } }
+
+.panel-default {
+  margin: 0 0 30px 0;
   background: #FFFFFF;
-  border-radius: 8px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 20px 32px 20px 32px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.24);
-  max-width: 640px; }
-  .message .mention {
+  border-radius: 8px;
+  border: none; }
+  .panel-default .panel-body {
+    padding: 30px 20px 0px 20px; }
+  .panel-default .media-left {
+    padding-right: 20px; }
+  .panel-default .media-object {
+    height: 50px;
+    width: 50px;
+    background: #FEDB43;
+    border-radius: 8px;
+    border: none; }
+  .panel-default code {
+    font-size: 16px; }
+  .panel-default .media-body .media-heading {
+    margin: 0 0 0 0;
+    font-weight: 600; }
+    .panel-default .media-body .media-heading .badge {
+      margin-top: -4px;
+      margin-left: 8px;
+      padding-left: 4px;
+      padding-right: 4px;
+      border-radius: 0px;
+      font-weight: 400;
+      color: #ACACAC;
+      background: #F9F9F9; }
+  .panel-default .media-body .message-mention {
     color: #4A90E2; }
-  .message .badge {
+  .panel-default .media-body .message-cursive {
+    font-style: italic;
+    color: #ACACAC; }
+  .panel-default .media-body blockquote {
+    padding: 0px 24px 0 16px;
+    margin-bottom: 30px;
+    border-left: 6px solid #DBDBDB; }
+
+.footer {
+  height: 400px;
+  padding: 80px; }
+  .footer .logo {
+    color: #FFFFFF; }
+    .footer .logo a {
+      color: #FFFFFF; }
+  .footer ul {
+    padding: 40px 0 40px 0;
+    list-style-type: none; }
+    .footer ul li > a {
+      color: #FFFFFF;
+      text-decoration: none; }
+      .footer ul li > a:hover {
+        text-decoration: underline; }
+  .footer .mono {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    font-family: "effra", sans-serif;
-    color: #ACACAC;
-    border-radius: 0px;
-    font-weight: 400;
-    background: #F4F4F4;
-    margin-top: -4px;
-    margin-left: 8px;
-    padding-left: 4px;
-    padding-right: 4px; }
+    font-family: Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-size: 16px;
+    font-weight: 400; }
+    .footer .mono a {
+      opacity: 0.5;
+      color: #FFFFFF;
+      text-decoration: none; }
+      .footer .mono a:hover {
+        text-decoration: underline; }
 
-@media screen and (min-width: 768px) {
-  .hero-image {
-    padding-right: 60px;
-    padding-top: 40px; } }
+.background-white {
+  background: #FFFFFF; }
 
-.size-img {
-  width: 180px;
-  height: 180px; }
-  @media screen and (max-width: 992px) {
-    .size-img {
-      width: 120px;
-      height: 120px; } }
+.background-grey {
+  background: #F9F9F9; }
 
-@media screen and (max-width: 640px) {
-  .container {
-    margin: 16px; } }
-
-.container-title {
-  margin-top: 40px; }
-
-.background-yellow {
-  background: #FEDB43; }
-
-.background-yellower {
-  background: #FECD3E; }
-
-html, body {
-  height: 100%;
-  background: #FEDB43; }
-
-.vertical-center {
-  min-height: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center; }
+.background-dark {
+  background: #2E2A35; }
+  .background-dark p, .background-dark ul, .background-dark .button-primary, .background-dark .jumbotron .btn-default, .jumbotron .background-dark .btn-default, .background-dark .button-secondary, .background-dark .navbar .navbar-btn, .navbar .background-dark .navbar-btn, .background-dark .footer ul li > a, .footer ul .background-dark li > a {
+    color: #FFFFFF;
+    opacity: 0.5; }
 
 /*# sourceMappingURL=custom-styles.css.map */
