@@ -87,7 +87,7 @@
 					<p>GreetBot is free to use. We are planning to add paid features in the future but that won't affect current users.</p>
 
 					<h2>How can I customize GreetBot's shoutouts?</h2>
-					<p>It's pretty simple. Just write <b>settings</b> in the direct message to GreetBot and you will be able to write a different shoutout.</p>
+					<p>Just write <b>settings</b> in the direct message to GreetBot and you will be able to write a different shoutout.</p>
 					<p>This is how it works:</p>
 
 					<div class="panel panel-default">
@@ -112,12 +112,13 @@
 									</div>
 									<div class="media-body">
 										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
-										<p>Cool, cool. Here is what I can post to <b>#general</b> when a new member joins:</p>
+										<p>Cool, cool. Here is what I can post to <span class="message-mention">#general</span> when a new member joins:</p>
 										<blockquote>
 											<p><span class="message-mention">@channel</span> hey everyone give a warm welcome to <span class="message-mention">@new_user_name!</span> Good to have you here&nbsp;&#128522</p>
 										</blockquote>
-										<p>What would you like to do? You can type:</p>
+										<p>What would you like me to do? You can type:</p>
 										<p><b>* Change</b> to write a different message;
+										<br><b>* Switch</b> to send direct messages instead;
 										<br><b>* Disable</b> to stop me from making shoutouts;
 										<br><b>* Nevermind</b> to quit setttings.</p>
 									</div>
@@ -176,19 +177,165 @@
 									</div>
 									<div class="media-body">
 										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
-										<p>Fantastic! Here is what I will post to <b>#general</b> when a new member joins the team:</p>
+										<p>Fantastic! Here is what I will post to <span class="message-mention">#general</span> when a new member joins the team:</p>
 										<blockquote>
 											<p>hey people, give a warm welcome to <span class="message-mention">@new_user_name</span>! Great to have you on the team&nbsp;&#128522</p>
 										</blockquote>
-										<p>We are all set now. If you need to change anything just type <b>settings</b> at any time.</p>
+										<p>We are all set&nbsp;&#128077 If you need to change anything just type <b>settings</b> at any time.</p>
 									</div>
 								</div>
 						</div>
 					</div>
 
-					<h2>Can I disable GreetBot?</h2>
-					<p>Yes, you can disable shoutouts at any time. You just need to ask GreetBot for settings and use the keyword <b>disable</b> to turn everything off.</p>
+					<h2>Can I greet new joiners privately in a direct message?</h2>
+					<p>Yes! During the initial setup GreetBot will ask whether you’d like to send a public shoutout or greet new joiners privately:</p>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>Yello! This is Greetbot, let's help your team welcome new members, shall we? Say <b>yes</b> to continue or <b>no</b> if you prefer to do it later.</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="/assets/img/img-user1.jpg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">Justin</p>
+										<p>Yes</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>Excellent! How would you like me to welcome new members? You can type:</p>
+										<p><b>* Private</b> to greet new members with a direct message
+										<br><b>* Public</b> to post a shoutout in a public channel</p>
+										<p>Pro tip: direct messages are more suitable in larger communities (less noisy)&nbsp;&#128134, whereas public shoutouts work decidely better in smaller teams (more fun!)&nbsp;&#128035</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<p>Alternatively, if you already have GreetBot set to send public shoutouts you can go to <b>settings</b> and type <b>switch</b> to start sending direct messages instead.</p>
 					<p>This is how it works:</p>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="/assets/img/img-user1.jpg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">Justin</p>
+										<p>Settings</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>Cool, cool. Here is what I can post to <span class="message-mention">#general</span> when a new member joins:</p>
+										<blockquote>
+											<p><span class="message-mention">@channel</span> hey everyone give a warm welcome to <span class="message-mention">@new_user_name!</span> Good to have you here&nbsp;&#128522</p>
+										</blockquote>
+										<p>What would you like me to do? You can type:</p>
+										<p><b>* Change</b> to write a different message;
+										<br><b>* Switch</b> to send direct messages instead;
+										<br><b>* Disable</b> to stop me from making shoutouts;
+										<br><b>* Nevermind</b> to quit setttings.</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="/assets/img/img-user1.jpg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">Justin</p>
+										<p>Switch</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>Nice! Here is what I can send in a <b>direct message</b>:</p>
+										<blockquote>
+											<p>Ahoy there <span class="message-mention">@new_user_name</span>! Good to have you here, make yourself at home&nbsp;&#128522</p>
+										</blockquote>
+										<p>Would you like to change this message? Say <b>yes</b> to write your own message or <b>no</b> to keep this one.</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="/assets/img/img-user1.jpg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">Justin</p>
+										<p>No</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>We are all set then&nbsp;&#128077 If you need to change anything just type <b>settings</b> at any time.</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<!-- <h2>Can GreetBot post to a different channel than #general?</h2>
+					<p>Yes! Just ask GreetBot for <b>settings</b> and then type the keyword <b>channel</b>. You will be able to select any other exisiting channel. GreetBot cannot post to private channels and groups, though.</p>
 
 					<div class="panel panel-default">
 						<div class="panel-body">
@@ -218,6 +365,171 @@
 										</blockquote>
 										<p>What would you like to do? You can type:</p>
 										<p><b>* Change</b> to write a different message;
+										<br><b>* Channel</b> to post to a different channel;
+										<br><b>* Disable</b> to stop me from making shoutouts;
+										<br><b>* Nevermind</b> to quit setttings.</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="/assets/img/img-user1.jpg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">Justin</p>
+										<p>Channel</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>Sure thing! I’m currently posting to <b>#general</b>. Would you like to keep using this channel or change to a different one?</p>
+										<p>Say <b>keep</b> to use #general or <b>change</b> to choose a different one.</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="/assets/img/img-user1.jpg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">Justin</p>
+										<p>Change</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>Okay — please type the name of the #channel you want me to use instead.</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="/assets/img/img-user1.jpg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">Justin</p>
+										<p>#warmwelcome</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>Perfect — I’ll post to <b>#warmwelcome</b> from now on.  If you want to change this just type <b>settings</b> at any time.</p>
+									</div>
+								</div>
+						</div>
+					</div> -->
+
+					<h2>Can I ask GreetBot for help?</h2>
+					<p>You can always type <b>help</b> and GreetBot will let you know what he can do for you.</p>
+					<p>This is how it works:</p>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="/assets/img/img-user1.jpg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">Justin</p>
+										<p>help</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>Yello there, this is GreetBot&nbsp;&#128522 I help you guys welcome new team members.
+</p>
+										<p>Currently I'm set to post a custom shoutout to <span class="message-mention">#general</span> whenever somone new joins your team:</p>
+										<blockquote>
+											<p><span class="message-mention">@channel</span> hey everyone give a warm welcome to <span class="message-mention">@new_user_name!</span> Good to have you here&nbsp;&#128522</p>
+										</blockquote>
+										<p>If you need me to change anything just type <b>settings</b> at any time.</p>
+										<p>You can read more on <span class="message-mention">https://greetbot.io</a></p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<h2>Can I disable GreetBot?</h2>
+					<p>Yes, you can disable shoutouts at any time. You just need to ask GreetBot for <b>settings</b> and use the keyword <b>disable</b> to turn everything off.</p>
+					<p>This is how it works:</p>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="/assets/img/img-user1.jpg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">Justin</p>
+										<p>Settings</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
+									</div>
+									<div class="media-body">
+										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
+										<p>Cool, cool. Here is what I can post to <span class="message-mention">#general</span> when a new member joins:</p>
+										<blockquote>
+											<p><span class="message-mention">@channel</span> hey everyone give a warm welcome to <span class="message-mention">@new_user_name!</span> Good to have you here&nbsp;&#128522</p>
+										</blockquote>
+										<p>What would you like me to do? You can type:</p>
+										<p><b>* Change</b> to write a different message;
+										<br><b>* Switch</b> to send direct messages instead;
 										<br><b>* Disable</b> to stop me from making shoutouts;
 										<br><b>* Nevermind</b> to quit setttings.</p>
 									</div>
@@ -253,48 +565,6 @@
 						</div>
 					</div>
 
-					<h2>Can I ask GreetBot for help?</h2>
-					<p>You can always type <b>help</b> and GreetBot will let you know what he can do for you.</p>
-					<p>This is how it works:</p>
-
-					<div class="panel panel-default">
-						<div class="panel-body">
-								<div class="media">
-									<div class="media-left">
-										<img class="media-object" src="/assets/img/img-user1.jpg">
-									</div>
-									<div class="media-body">
-										<p class="media-heading">Justin</p>
-										<p>help</p>
-									</div>
-								</div>
-						</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-body">
-								<div class="media">
-									<div class="media-left">
-										<img class="media-object img-greetbot" src="/assets/img/img-greetbot.svg">
-									</div>
-									<div class="media-body">
-										<p class="media-heading">GreetBot<span class="badge">BOT</span></p>
-										<p>Yello there, this is GreetBot&nbsp;&#128522 I help you guys welcome new team members.
-</p>
-										<p>Currently I'm set to post a custom shoutout to <b>#general</b> whenever somone new joins your team:</p>
-										<blockquote>
-											<p><span class="message-mention">@channel</span> hey everyone give a warm welcome to <span class="message-mention">@new_user_name!</span> Good to have you here&nbsp;&#128522</p>
-										</blockquote>
-										<p>If you need me to change anything just type settings at any time.</p>
-										<p>You can read more on <span class="message-mention">https://greetbot.io</a></p>
-									</div>
-								</div>
-						</div>
-					</div>
-
-					<h2>Can GreetBot post to a different channel than #general?</h2>
-					<p>Not yet. But we are thinking about adding this feature. If it's important for you and your team please <a href="mailto:yello@greetbot.io?Subject=Yello">let us know</a>!</p>
-
 					<h2>Did we miss anything?</h2>
 					<p>If there is anything else that's not clear or you'd just like to send us some feedback&nbsp;&#8212 <a href="mailto:yello@greetbot.io?Subject=Yello">email us.</a> We'd love to hear from you&nbsp;&#128522</p>
 
@@ -310,11 +580,11 @@
 				<div class="col-sm-12">
 					<span class="logo"><a href="/">GreetBot</a></span>
 					<ul class="list-inline">
-						<li><a href="//greetbot.io/about">About</a></li>
+						<li><a href="/about">About</a></li>
 						<li><a href="mailto:yello@greetbot.io?Subject=Yello">Contact</a></li>
-						<li><a href="//greetbot.io/privacy">Privacy</a></li>
+						<li><a href="/privacy">Privacy</a></li>
 					</ul>
-					<p class="mono"><a href="https://projectcrater.com" target="_blank">Project Crater, 2016</a></p>
+					<p class="mono"><a href="http://projectcrater.com" target="_blank">Project Crater, 2016</a></p>
 				</div>
 			</div>
 		</div>
