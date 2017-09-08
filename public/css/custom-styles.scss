@@ -224,6 +224,7 @@ body > .logo { // A workaround to keep the logo centred on top of the navbar (us
 		border-radius: 8px;
 	}
 	h2 {
+		margin-top: 30px; // Overwritten here as an exception
 		margin-bottom: 0px;
 	}
 	p {

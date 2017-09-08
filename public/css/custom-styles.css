@@ -185,6 +185,7 @@ body > .logo {
     border: none;
     border-radius: 8px; }
   .jumbotron h2, .jumbotron p, .jumbotron ul, .jumbotron .button-primary, .jumbotron .btn-default, .jumbotron .button-secondary, .jumbotron .navbar .navbar-btn, .navbar .jumbotron .navbar-btn, .jumbotron .footer ul li > a, .footer ul .jumbotron li > a {
+    margin-top: 30px;
     margin-bottom: 0px; }
   .jumbotron p, .jumbotron ul, .jumbotron .button-primary, .jumbotron .btn-default, .jumbotron .button-secondary, .jumbotron .navbar .navbar-btn, .navbar .jumbotron .navbar-btn, .jumbotron .footer ul li > a, .footer ul .jumbotron li > a {
     margin-top: 0px;
