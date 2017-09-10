@@ -9,6 +9,7 @@ $color-white: #FFFFFF;
 $color-blue-30: #4A90E2;
 $color-blue-90: #2E2A35;
 $color-red: #EA5940;
+$color-yellow-01:#FFF3B8;
 $color-yellow-05: #FEDB43;
 
 /* Mixins */
@@ -303,7 +304,7 @@ body > .logo { // A workaround to keep the logo centred on top of the navbar (us
 			border-left: 6px solid $color-grey-15;
 		}
 		.message-highlight {
-			background-color: $color-yellow-05;
+			background-color: $color-yellow-01;
 		}
 	}
 }
