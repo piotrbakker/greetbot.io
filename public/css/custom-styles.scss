@@ -332,7 +332,7 @@ body > .logo { // A workaround to keep the logo centred on top of the navbar (us
 	.mono {
 		@include monospace;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 600;
 		a {
 			opacity: 0.5;
 			color: $color-white;
