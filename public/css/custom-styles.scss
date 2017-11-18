@@ -32,6 +32,7 @@ $color-yellow-05: #FEDB43;
 @mixin monospace {
 	@include all-text;
 	font-family: Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+	letter-spacing: 0px;
 }
 @mixin button {
 	@extend p;
@@ -246,6 +247,23 @@ body > .logo { // A workaround to keep the logo centred on top of the navbar (us
 		padding-top: 30px;
 	}
 }
+.alert-success {
+	@include monospace;
+	background-color: $color-yellow-01;
+	border: none;
+	.alert-text {
+		color: $color-grey-90;
+		opacity: .72;
+		.alert-link {
+			color: inherit;
+		}
+	}
+	span.glyphicon-pushpin {
+		color: $color-grey-90;
+		opacity: .72;
+	}
+}
+
 .panel-default {
 	margin: 0 0 30px 0;
 	background: $color-white;
@@ -308,6 +326,8 @@ body > .logo { // A workaround to keep the logo centred on top of the navbar (us
 		}
 	}
 }
+
+
 .footer {
 	height: 400px;
 	padding: 80px;

@@ -201,6 +201,22 @@ body > .logo {
     .container-content {
       padding-top: 30px; } }
 
+.alert-success {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  letter-spacing: 0px;
+  background-color: #FFF3B8;
+  border: none; }
+  .alert-success .alert-text {
+    color: #02051C;
+    opacity: .72; }
+    .alert-success .alert-text .alert-link {
+      color: inherit; }
+  .alert-success span.glyphicon-pushpin {
+    color: #02051C;
+    opacity: .72; }
+
 .panel-default {
   margin: 0 0 30px 0;
   background: #FFFFFF;
@@ -264,6 +280,7 @@ body > .logo {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-family: Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    letter-spacing: 0px;
     font-size: 16px;
     font-weight: 600; }
     .footer .mono a {
