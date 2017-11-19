@@ -183,11 +183,16 @@ body > .logo { // A workaround to keep the logo centred on top of the navbar (us
 }
 
 .customer-logo {
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	filter: grayscale(100%);
+	margin-top: 60px;
+	// -webkit-filter: grayscale(100%);
+	// -moz-filter: grayscale(100%);
+	// -o-filter: grayscale(100%);
+	// -ms-filter: grayscale(100%);
+	// filter: grayscale(100%);
+	width: 88%;
+	@media (max-width: 768px) {
+		width: 24%;
+	}
 }
 
 // Containers
@@ -255,6 +260,11 @@ body > .logo { // A workaround to keep the logo centred on top of the navbar (us
 		padding-top: 30px;
 	}
 }
+.container-logo {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
 .alert-success {
 	@include monospace;
 	background-color: $color-yellow-01;
@@ -378,6 +388,9 @@ body > .logo { // A workaround to keep the logo centred on top of the navbar (us
 }
 .background-grey {
 	background: $color-grey-05;
+}
+.background-darker-grey {
+	background: darken($color-grey-05, 2%);
 }
 .background-dark {
 	background: $color-blue-90;
