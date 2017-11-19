@@ -182,6 +182,14 @@ body > .logo { // A workaround to keep the logo centred on top of the navbar (us
 	}
 }
 
+.customer-logo {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
 // Containers
 .navbar {
 	z-index: 9;

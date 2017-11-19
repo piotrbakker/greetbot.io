@@ -150,6 +150,13 @@ body > .logo {
       position: absolute;
       top: 40px; } }
 
+.customer-logo {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
 .navbar {
   z-index: 9;
   height: 90px;
